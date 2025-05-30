@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Video Overlay Example</title>
+<style>
+  /* Make video take full container size */
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Overlay content on top of video */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* text color */
+    text-align: center;
+    pointer-events: none; /* So clicks go to button only */
+  }
+
+  /* Make button clickable */
+
+  /* Hover effect for button */
+  .overlay a:hover {
+    background-color: #0056b3;
+  }
+
+  /* Logo image styling */
+  .overlay img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .MastheadVideo {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+  }
+  button{
+    background :rgb(177, 22, 17);
+    width: 250px;
+    height: 30px;
+    border: white;
+    border-radius: 10px;
+    transition:0.5sec;
+  }
+  button:hover{
+    background-color:rgb(112, 15, 11) ;
+  }
+</style>
+</head>
+<body>
+    <div>
+    <video class="MastheadVideo" autoplay="" muted="" loop="" playsinline="">
+                        <source src="https://www-static.warframe.com/videos/landing/masthead.webm" type="video/webm">
+                        <source src="https://www-static.warframe.com/videos/landing/masthead.mp4" type="video/mp4">
+                    </video>
+
+  <div class="overlay">
+<img class="MastheadLogo-image" src="https://www-static.warframe.com/images/landing/logo-white.png" style="width: 500px;" alt="Warframe"> <br>
+<button class="Button Button--primary TopCTAButton">
+        <span class="Button-label">Play Free Now</span>
+    </button>
+  </div>
+<div class="overlay-1"></div></div>
+
+</body>
+</html>
