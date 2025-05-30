@@ -6,6 +6,13 @@
 <title>Video Overlay Example</title>
 <style>
   /* Make video take full container size */
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative; /* For absolute positioning of overlay */
+  }
   video {
     width: 100%;
     height: auto;
@@ -59,9 +66,9 @@
 </head>
 <body>
     <div>
-    <video class="MastheadVideo" autoplay="" muted="" loop="" playsinline="">
-                        <source src="https://www-static.warframe.com/videos/landing/masthead.webm" type="video/webm">
-                        <source src="https://www-static.warframe.com/videos/landing/masthead.mp4" type="video/mp4">
+    <video style="overflow: hidden;" class="MastheadVideo" autoplay="" muted="" loop="" playsinline="">
+                        <source style="overflow: hidden;" src="background.mp4" type="video/webm">
+                        <source style="overflow: hidden;" src="background.mp4" type="video/mp4">
                     </video>
 
   <div class="overlay">
