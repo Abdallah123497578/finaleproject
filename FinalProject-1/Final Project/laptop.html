@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Gaming Laptops Shop</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 80px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+      background-color: #222;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      min-width: 180px;
+      border-radius: 5px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    .dropdown-menu li {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      padding: 12px 20px;
+      font-size: 14px;
+      border-bottom: 1px solid #333;
+    }
+
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #444;
+    }
+
+    main {
+      padding: 40px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 200px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #222;
+      margin-top: 15px;
+    }
+
+    .specs {
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .specs h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .specs ul {
+      padding-left: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo-removebg-preview.png" alt="My logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="shop.html">Shop Now</a>
+        <ul class="dropdown-menu">
+          <li><a href="laptop.html">Laptops</a></li>
+          <li><a href="pcs.html">PCs</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="contact.html">Contact Us</a>
+        <ul class="dropdown-menu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="grid-container">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="generated-image-1748792620919-removebg-preview.png" alt="Dell Gaming Laptop" />
+        <div class="price">$2,599.99</div>
+        <div class="specs">
+          <h3>Specs:</h3>
+          <ul>
+            <li>Intel Core i7-11800H</li>
+            <li>RTX 3070</li>
+            <li>16GB RAM</li>
+            <li>1TB SSD</li>
+            <li>15.6" QHD 240Hz Display</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="mi-removebg-preview.png" alt="Alienware Gaming Laptop" />
+        <div class="price">$1,499.00</div>
+        <div class="specs">
+          <h3>Specs:</h3>
+          <ul>
+            <li>Intel Core i7-10750H</li>
+            <li>Radeon 5500</li>
+            <li>16GB RAM</li>
+            <li>256GB SSD</li>
+            <li>15.6" FHD Display</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://rog.asus.com/media/1510/rog-zephyrus-g14-2022.jpg" alt="ASUS ROG Zephyrus G14" />
+        <div class="price">$2,699.00</div>
+        <div class="specs">
+          <h3>Specs:</h3>
+          <ul>
+            <li>AMD Ryzen 9 7940HS</li>
+            <li>RTX 4080</li>
+            <li>16GB RAM</li>
+            <li>1TB SSD</li>
+            <li>14" QHD 165Hz Display</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="https://rog.asus.com/media/1510/rog-strix-g15-2022.jpg" alt="ASUS ROG Strix G15" />
+        <div class="price">$1,659.00</div>
+        <div class="specs">
+          <h3>Specs:</h3>
+          <ul>
+            <li>AMD Ryzen 7 6800H</li>
+            <li>RTX 3060</li>
+            <li>16GB RAM</li>
+            <li>1TB SSD</li>
+            <li>15.6" WQHD 165Hz Display</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <img src="https://www.creatuscomputer.com/wp-content/uploads/2023/05/lenovo-legion-slim-5.jpg" alt="Lenovo Legion Slim 5" />
+        <div class="price">$1,799.99</div>
+        <div class="specs">
+          <h3>Specs:</h3>
+          <ul>
+            <li>AMD Ryzen 7 8845HS</li>
+            <li>RTX 4060</li>
+            <li>16GB RAM</li>
+            <li>1TB SSD</li>
+            <li>16" WQXGA 165Hz Display</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <img src="https://www.rtings.com/images/reviews/laptop/best-gaming-laptop-20220926.jpg" alt="MSI GE66 Raider" />
+        <div class="price">$2,605.00</div>
+        <div class="specs">
+          <h3>Specs:</h3>
+          <ul>
+            <li>Intel Core i7-11800H</li>
+            <li>RTX 3070</li>
+            <li>16GB RAM</li>
+            <li>1TB SSD</li>
+            <li>15.6" QHD 240Hz Display</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
