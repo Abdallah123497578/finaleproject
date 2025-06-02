@@ -1,273 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css"/>
-  <title>Gaming Laptops Shop</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Gaming Laptops Shop</title>
+    <style>
+      .product-row {
+        display: flex;
+        background-color: #fff;
+        margin: 30px 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        flex-wrap: wrap;
+      }
 
-    nav {
-      background-color: #111;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 40px;
-      height: 80px;
-    }
+      .product-image {
+        flex: 1 1 400px;
+      }
 
-    .logo img {
-      height: 50px;
-      width: auto;
-    }
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        display: block;
+      }
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      align-items: center;
-    }
+      .product-info {
+        flex: 2 1 500px;
+        padding: 30px;
+      }
 
-    .nav-links li {
-      position: relative;
-    }
+      .product-info h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
 
-    .nav-links a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: background 0.3s ease;
-      border-radius: 5px;
-    }
+      .tagline {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+      }
 
-    .nav-links a:hover {
-      background-color: #222;
-    }
+      .price {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #000;
+      }
 
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #222;
-      min-width: 180px;
-      border-radius: 5px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
+      .highlights {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        color: #444;
+        font-size: 15px;
+        line-height: 1.6;
+      }
 
-    .dropdown-menu li {
-      display: block;
-    }
+      .buy-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        background-color: #111;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
 
-    .dropdown-menu a {
-      padding: 12px 20px;
-      font-size: 14px;
-      border-bottom: 1px solid #333;
-    }
+      .buy-btn:hover {
+        background-color: #333;
+      }
 
-    .dropdown-menu a:last-child {
-      border-bottom: none;
-    }
+      @media (max-width: 768px) {
+        .product-row {
+          flex-direction: column;
+        }
 
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
+        .product-image img {
+          max-height: 250px;
+        }
 
-    .dropdown-menu a:hover {
-      background-color: #444;
-    }
+        .product-info {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="logo-removebg-preview.png" alt="My logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="shop.html">Shop Now</a>
+          <ul class="dropdown-menu">
+            <li><a href="laptop.html">Laptops</a></li>
+            <li><a href="pcs.html">PCs</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="contact.html">Contact Us</a>
+          <ul class="dropdown-menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-    main {
-      padding: 40px;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .product-card {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-      max-height: 200px;
-    }
-
-    .price {
-      font-size: 20px;
-      font-weight: bold;
-      color: #222;
-      margin-top: 15px;
-    }
-
-    .specs {
-      text-align: left;
-      margin-top: 15px;
-    }
-
-    .specs h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #333;
-    }
-
-    .specs ul {
-      padding-left: 20px;
-      color: #555;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="logo">
-      <img src="logo-removebg-preview.png" alt="My logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="shop.html">Shop Now</a>
-        <ul class="dropdown-menu">
-          <li><a href="laptop.html">Laptops</a></li>
-          <li><a href="pcs.html">PCs</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-          <li><a href="accessories.html">Accessories</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html">About Us</a></li>
-      <li class="dropdown">
-        <a href="contact.html">Contact Us</a>
-        <ul class="dropdown-menu">
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-
-  <main>
-    <div class="grid-container">
-
+    <main>
       <!-- Product 1 -->
-      <div class="product-card">
-        <img src="generated-image-1748792620919-removebg-preview.png" alt="Dell Gaming Laptop" />
-        <div class="price">$2,599.99</div>
-        <div class="specs">
-          <h3>Specs:</h3>
-          <ul>
+      <div class="product-row">
+        <div class="product-image">
+          <img src="generated-image-1748792620919-removebg-preview.png" alt="Dell Gaming Laptop" />
+        </div>
+        <div class="product-info">
+          <h2>Dell Gaming Laptop</h2>
+          <p class="tagline">Smooth gaming, solid power</p>
+          <div class="price">$2,599.99</div>
+          <ul class="highlights">
             <li>Intel Core i7-11800H</li>
-            <li>RTX 3070</li>
-            <li>16GB RAM</li>
-            <li>1TB SSD</li>
+            <li>RTX 3070 Graphics</li>
+            <li>16GB RAM, 1TB SSD</li>
             <li>15.6" QHD 240Hz Display</li>
           </ul>
+          <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
       <!-- Product 2 -->
-      <div class="product-card">
-        <img src="mi-removebg-preview.png" alt="Alienware Gaming Laptop" />
-        <div class="price">$1,499.00</div>
-        <div class="specs">
-          <h3>Specs:</h3>
-          <ul>
+      <div class="product-row">
+        <div class="product-image">
+          <img src="mi-removebg-preview.png" alt="Alienware Gaming Laptop" />
+        </div>
+        <div class="product-info">
+          <h2>Alienware Gaming Laptop</h2>
+          <p class="tagline">Bold design, reliable performance</p>
+          <div class="price">$1,499.00</div>
+          <ul class="highlights">
             <li>Intel Core i7-10750H</li>
-            <li>Radeon 5500</li>
-            <li>16GB RAM</li>
-            <li>256GB SSD</li>
+            <li>Radeon 5500 Graphics</li>
+            <li>16GB RAM, 256GB SSD</li>
             <li>15.6" FHD Display</li>
           </ul>
+          <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
       <!-- Product 3 -->
-      <div class="product-card">
-        <img src="https://rog.asus.com/media/1510/rog-zephyrus-g14-2022.jpg" alt="ASUS ROG Zephyrus G14" />
-        <div class="price">$2,699.00</div>
-        <div class="specs">
-          <h3>Specs:</h3>
-          <ul>
+      <div class="product-row">
+        <div class="product-image">
+          <img src="https://rog.asus.com/media/1510/rog-zephyrus-g14-2022.jpg" alt="ASUS ROG Zephyrus G14" />
+        </div>
+        <div class="product-info">
+          <h2>ASUS ROG Zephyrus G14</h2>
+          <p class="tagline">Portable powerhouse</p>
+          <div class="price">$2,699.00</div>
+          <ul class="highlights">
             <li>AMD Ryzen 9 7940HS</li>
-            <li>RTX 4080</li>
-            <li>16GB RAM</li>
-            <li>1TB SSD</li>
+            <li>RTX 4080 Graphics</li>
+            <li>16GB RAM, 1TB SSD</li>
             <li>14" QHD 165Hz Display</li>
           </ul>
+          <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
       <!-- Product 4 -->
-      <div class="product-card">
-        <img src="https://rog.asus.com/media/1510/rog-strix-g15-2022.jpg" alt="ASUS ROG Strix G15" />
-        <div class="price">$1,659.00</div>
-        <div class="specs">
-          <h3>Specs:</h3>
-          <ul>
+      <div class="product-row">
+        <div class="product-image">
+          <img src="https://rog.asus.com/media/1510/rog-strix-g15-2022.jpg" alt="ASUS ROG Strix G15" />
+        </div>
+        <div class="product-info">
+          <h2>ASUS ROG Strix G15</h2>
+          <p class="tagline">Game on with confidence</p>
+          <div class="price">$1,659.00</div>
+          <ul class="highlights">
             <li>AMD Ryzen 7 6800H</li>
-            <li>RTX 3060</li>
-            <li>16GB RAM</li>
-            <li>1TB SSD</li>
+            <li>RTX 3060 Graphics</li>
+            <li>16GB RAM, 1TB SSD</li>
             <li>15.6" WQHD 165Hz Display</li>
           </ul>
+          <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
       <!-- Product 5 -->
-      <div class="product-card">
-        <img src="https://www.creatuscomputer.com/wp-content/uploads/2023/05/lenovo-legion-slim-5.jpg" alt="Lenovo Legion Slim 5" />
-        <div class="price">$1,799.99</div>
-        <div class="specs">
-          <h3>Specs:</h3>
-          <ul>
+      <div class="product-row">
+        <div class="product-image">
+          <img src="https://www.creatuscomputer.com/wp-content/uploads/2023/05/lenovo-legion-slim-5.jpg" alt="Lenovo Legion Slim 5" />
+        </div>
+        <div class="product-info">
+          <h2>Lenovo Legion Slim 5</h2>
+          <p class="tagline">Slim, sleek, and strong</p>
+          <div class="price">$1,799.99</div>
+          <ul class="highlights">
             <li>AMD Ryzen 7 8845HS</li>
-            <li>RTX 4060</li>
-            <li>16GB RAM</li>
-            <li>1TB SSD</li>
+            <li>RTX 4060 Graphics</li>
+            <li>16GB RAM, 1TB SSD</li>
             <li>16" WQXGA 165Hz Display</li>
           </ul>
+          <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
       <!-- Product 6 -->
-      <div class="product-card">
-        <img src="https://www.rtings.com/images/reviews/laptop/best-gaming-laptop-20220926.jpg" alt="MSI GE66 Raider" />
-        <div class="price">$2,605.00</div>
-        <div class="specs">
-          <h3>Specs:</h3>
-          <ul>
+      <div class="product-row">
+        <div class="product-image">
+          <img src="https://www.rtings.com/images/reviews/laptop/best-gaming-laptop-20220926.jpg" alt="MSI GE66 Raider" />
+        </div>
+        <div class="product-info">
+          <h2>MSI GE66 Raider</h2>
+          <p class="tagline">Performance on another level</p>
+          <div class="price">$2,605.00</div>
+          <ul class="highlights">
             <li>Intel Core i7-11800H</li>
-            <li>RTX 3070</li>
-            <li>16GB RAM</li>
-            <li>1TB SSD</li>
+            <li>RTX 3070 Graphics</li>
+            <li>16GB RAM, 1TB SSD</li>
             <li>15.6" QHD 240Hz Display</li>
           </ul>
+          <button class="buy-btn">Buy Now</button>
         </div>
       </div>
-
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>

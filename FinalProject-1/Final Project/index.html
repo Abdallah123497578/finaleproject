@@ -1,58 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Video Overlay Example</title>
-<style>
-  /* Make video take full container size */
-  body{
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent scrollbars */
-    position: relative; /* For absolute positioning of overlay */
-  }
-  video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+      video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+      }
+      .overlay img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      .Video {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
+      /* Navbar styles */
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        background: black; /* semi-transparent background */
+        padding: 10px 40px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">
+        <img src="logo-removebg-preview.png" alt="My logo" style="width: 200px;">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="shop.html">Shop Now</a>
+          <ul class="dropdown-menu">
+            <li><a href="laptop.html">Laptops</a></li>
+            <li><a href="pcs.html">PCs</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="contact.html">Contact Us</a>
+          <ul class="dropdown-menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-  /* Overlay content on top of video */
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  /* Logo image styling */
-  .overlay img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  .Video {
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    width: 100%;
-  }
-</style>
-</head>
-<body>
-    <div>
-    <video style="overflow: hidden;" class="Video" autoplay="" muted="" loop="" playsinline="">
-                        <source style="overflow: hidden;" src="background.mp4" type="video/webm">
-                        <source style="overflow: hidden;" src="background.mp4" type="video/mp4">
-                    </video>
+    <!-- Video background -->
+    <video class="Video" autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/webm">
+      <source src="background.mp4" type="video/mp4">
+    </video>
 
-  <div class="overlay">
-<a href="laptop.html"><img src="logo-removebg-preview.png" style="width: 1000px;" alt="My website logo"></a> <br>
-  </div>
-
-</body>
+    <!-- Overlay content -->
+    <div class="overlay">
+      <a href="laptop.html">
+        <img src="logo-removebg-preview.png" style="width: 1000px;" alt="My website logo">
+      </a>
+      <br>
+    </div>
+  </body>
 </html>
