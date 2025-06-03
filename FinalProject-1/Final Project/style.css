@@ -1,70 +1,71 @@
 /* Reset default padding/margin */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Include padding and border */
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif; /* Use a sans-serif font */
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color for readability */
 }
 
 /* Nav bar styling */
 nav {
-    background-color: #111;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    height: 80px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #111; /* Dark background for the nav bar */ 
+    color: white; /* White text for contrast */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; /* takes all items to center */
+    padding: 0 40px; /* Horizontal padding */
+    height: 80px; /* sets height for the nav bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Logo */
 .logo img {
-    height: 50px;
+    height: 50px; /* Set height for the logo */
     width: auto;
 }
 
 /* Navigation links */
 .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
+    list-style: none; /* Remove any kind of list styling */
+    display: flex; 
+    align-items: center; /* Align items vertically */
 }
 
 .nav-links li {
-    position: relative;
+    position: relative; /* makes positions relative for dropdowns */
 }
 
 .nav-links a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: background 0.3s ease;
-    border-radius: 5px;
+    display: block; /* Makes the link a block (as in one line) */
+    padding: 15px 20px; /* Padding for the links */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 500; /* Medium font weight */
+    transition: background 0.3s ease; /* medium speed transition for background color */
+    border-radius: 5px; /* Rounded corners for links */
 }
 
 .nav-links a:hover {
-    background-color: #222;
+    background-color: #222; /* Darker background color on hover */
 }
 
 /* Dropdown menu */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    min-width: 180px;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    z-index: 999;
+    display: none; /* Hide dropdown if not hovered over */
+    position: absolute; 
+    top: 100%; /* Position below the nav link */
+    left: 0; /* No space to the left */
+    background-color: #222; /* sets  Dark background color for dropdown menu */
+    min-width: 180px; /* Minimum width for the dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Shadow for dropdown */
+    z-index: 999;  /* Ensures dropdown is above other content *//*also it says z index 999 cause that what was the tutorial said.       */
 }
 
 .dropdown-menu li {
@@ -87,4 +88,13 @@ nav {
 
 .dropdown-menu a:hover {
     background-color: #444;
+}
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
