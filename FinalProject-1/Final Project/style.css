@@ -55,7 +55,7 @@ nav {
     background-color: #222; /* Darker background color on hover */
 }
 
-/* Dropdown menu */
+/* all dropdown menu code was gotten from this youtube tutorial: https://www.youtube.com/watch?v=rgUp302f_lY&t=12s&ab_channel=DaniKrossing */
 .dropdown-menu {
     display: none; /* Hide dropdown if not hovered over */
     position: absolute; 
@@ -65,7 +65,7 @@ nav {
     min-width: 180px; /* Minimum width for the dropdown */
     border-radius: 5px; /* Rounded corners for dropdown */
     box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Shadow for dropdown */
-    z-index: 999;  /* Ensures dropdown is above other content *//*also it says z index 999 cause that what was the tutorial said.       */
+    z-index: 999;  /* Ensures dropdown is above other content *//*also it says z index 999 cause that what was the tutorial said.*/
 }
 
 .dropdown-menu li {
