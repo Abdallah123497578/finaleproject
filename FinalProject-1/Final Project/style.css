@@ -66,6 +66,16 @@ nav {
     border-radius: 5px; /* Rounded corners for dropdown */
     box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Shadow for dropdown */
     z-index: 999;  /* Ensures dropdown is above other content *//*also it says z index 999 cause that what was the tutorial said.*/
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
 }
 
 .dropdown-menu li {

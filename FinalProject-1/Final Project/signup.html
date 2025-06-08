@@ -2,55 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title>Customer Complaint</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  <title>Sign Up | Lotus Gaming</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f7f7f7;
       margin: 0;
       padding: 0;
-      overflow: hidden;
     }
 
     .container {
-      max-width: 600px;
-      margin: 50px auto;
+      max-width: 500px;
+      margin: 60px auto;
       background: #fff;
-      padding: 30px 40px;
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 135px;
     }
 
     h2 {
       text-align: center;
       margin-bottom: 25px;
-      color: #333;
+      color: #111;
     }
 
     label {
       display: block;
       margin-bottom: 8px;
       font-weight: bold;
+      font-size: 14px;
+      color: #333;
     }
 
     input[type="text"],
     input[type="email"],
-    select,
-    textarea {
+    input[type="password"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 14px;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 100px;
     }
 
     button {
@@ -70,22 +66,40 @@
       background-color: #333;
     }
 
-    .success-message {
-      display: none;
+    .login {
       text-align: center;
-      margin-top: 20px;
-      color: green;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login a {
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: white;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="logo">
             <img src="logo-removebg-preview.png" alt="My logo" style="width: 200px;">
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+
+            <!-- Shop Dropdown -->
             <li class="dropdown">
                 <a href="shop.html">Shop Now</a>
                 <ul class="dropdown-menu">
@@ -95,7 +109,10 @@
                     <li><a href="accessories.html">Accessories</a></li>
                 </ul>
             </li>
+
             <li><a href="about.html">About Us</a></li>
+
+            <!-- Contact Dropdown -->
             <li class="dropdown">
                 <a href="contact.html">Contact Us</a>
                 <ul class="dropdown-menu">
@@ -107,47 +124,44 @@
     </nav>
 
   <div class="container">
-    <h2>Customer Complaint Form</h2>
-    <form id="complaintForm">
+    <h2>Create Your Account</h2>
+    <form onsubmit="handleSignup(event)">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" placeholder="Enter your name" required />
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
 
-      <label for="order">Order Number (if applicable)</label>
-      <input type="text" id="order" name="order">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Create a password" required />
 
-      <label for="category">Complaint Category</label>
-      <select id="category" name="category" required>
-        <option value="">Select a category</option>
-        <option value="product">Product Issue</option>
-        <option value="delivery">Delivery Problem</option>
-        <option value="billing">Billing Error</option>
-        <option value="customer_service">Customer Service</option>
-        <option value="other">Other</option>
-      </select>
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" placeholder="Confirm your password" required />
 
-      <label for="message">Complaint Details</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Submit Complaint</button>
+      <button type="submit">Sign Up</button>
     </form>
-    <div class="success-message" id="successMessage">
-       Thank you! Your complaint has been submitted.
+    <div class="login">
+      Already have an account? <a href="login.html">Login</a>
     </div>
   </div>
-    <footer>
-    <p>&copy; 2025 Gaming Laptops Shop. All rights reserved.</p>
-    </footer>
+
+  <footer>
+    &copy; 2025 Lotus Gaming. All rights reserved.
+  </footer>
+
   <script>
-    document.getElementById("complaintForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      document.getElementById("successMessage").style.display = "block";
-      this.reset();
-    });
+    function handleSignup(event) {
+      event.preventDefault();
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+      if (password !== confirm) {
+        alert("❌ Passwords do not match!");
+        return;
+      }
+      alert("✅ Sign up successful!");
+      event.target.reset();
+    }
   </script>
 
 </body>
 </html>
-
