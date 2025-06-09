@@ -1,88 +1,88 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><!--Sets the language for the document-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title>Customer Complaint</title>
+  <link rel="stylesheet" href="style.css"><!--Links to external stylesheet-->
+  <title>Customer Complaint</title><!--Title of the page-->
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
+    body {/*makes it so all code here affects everything that is insode the body tag*/
+      font-family: 'Segoe UI', sans-serif;/*sets the font for the whole page*/
+      background-color: #f7f7f7;/*sets the background color to white*/
+      margin: 0;/*sets the margin of the entire page to zero*/
+      padding: 0;/*sets the padding for the entire page to zero*/
+      overflow: hidden;/*Makes so scrolling is impossible*/
     }
 
     .container {
-      max-width: 600px;
+      max-width: 600px;/*makes it so that the width doesnt go above 600px*/
       margin: 50px auto;
-      background: #fff;
+      background: #fff;/*sets the background color to white*/
       padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;/*makes the corners round*/
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);/*adds a shadow around the box*/
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #333;
+      text-align: center;/*aligns the text to the centre*/
+      margin-bottom: 25px;/*adds an invisible space under the text*/
+      color: #333;/* Sets the text color to a darker shade of gray*/
     }
 
     label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
+      display: block;/*Makes it so its the only thing on that line*/
+      margin-bottom: 8px;/*adds an invisible space under the label*/
+      font-weight: bold;/*Makes the text bold*/
     }
 
     input[type="text"],
     input[type="email"],
     select,
     textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+      width: 100%;/*gives it full width*/
+      padding: 10px;/* adds padding all around*/
+      margin-bottom: 18px;/*creates invisible space under*/
+      border: 1px solid #ccc;/*makes border around the text areas with 1px of thickness, a style of solid and a shade of white as the color*/
+      border-radius: 6px;/*Rounds the corners*/
+      font-size: 14px;/*Setsthe font size to 14px*/
     }
 
     textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 100px;/*Sets the minimum hieght of the text area to a 100px */
     }
 
     button {
-      width: 100%;
-      padding: 12px;
-      background-color: #111;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      width: 100%;/*gives the button the full width*/
+      padding: 12px;/*Sets an invisible space all around inside the button*/
+      background-color: #111;/*Sets the background color to black*/
+      color: white;/*Sets the text color to white*/
+      font-size: 16px;/*Gives the text a font size of 16px*/
+      font-weight: bold;/*Gives the text boldness*/
+      border: none;/*removes all sorts/types of borders around the button*/
+      border-radius: 6px;/*makes the corners round*/
+      cursor: pointer;/*makes it so when you hover over the button the cursor changes form the jormal thing to the */
       transition: background 0.3s ease;
     }
-
+  /*makes it so when you hover over the button the background color changes to grey*/
     button:hover {
-      background-color: #333;
+      background-color: #333;/*sets backgrond to gray*/
     }
 
     .success-message {
-      display: none;
-      text-align: center;
-      margin-top: 20px;
-      color: green;
+      display: none;/*No display?*/
+      text-align: center;/*aligns to text*/
+      margin-top: 20px;/*adds space to the top*/
+      color: green;/*sets text color to green*/
     }
   </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar code, same as other pages, just a normal nav with dropdown -->
     <nav>
         <div class="logo">
-            <img src="logo-removebg-preview.png" alt="My logo" style="width: 200px;">
+            <img src="logo-removebg-preview.png" alt="My logo" style="width: 200px;"><!--sets logo img-->
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -125,6 +125,7 @@
         <option value="delivery">Delivery Problem</option>
         <option value="billing">Billing Error</option>
         <option value="customer_service">Customer Service</option>
+        <option value="karen">Karen Service</option>
         <option value="other">Other</option>
       </select>
 
