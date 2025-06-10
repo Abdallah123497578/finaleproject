@@ -4,53 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <title>Home</title>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-      }
-      video {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      .overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 2;
-      }
-      .overlay img {
-        width: 150px;
-        height: auto;
-        margin-bottom: 20px;
-      }
-      .Video {
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-      }
-      /* Navbar styles */
-      nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 3;
-        display: flex;
-        align-items: center;
-        background: black; /* semi-transparent background */
-        padding: 10px 40px;
-        box-sizing: border-box;
-      }
-    </style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  /* Gradient overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.3) 100%);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .overlay-content {
+    color: white;
+    margin-left: 60px;
+    max-width: 600px;
+    font-size: 3.25rem;
+    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    text-transform: none;
+  }
+
+  .overlay-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .overlay-content a.button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 0; /* Straight corners */
+    transition: background-color 0.3s;
+  }
+
+  .overlay-content a.button:hover {
+    background-color: #dddddd;
+  }
+
+  /* Navbar styles */
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    background: black;
+    padding: 10px 40px;
+    box-sizing: border-box;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+  }
+
+  nav li {
+    margin-left: 20px;
+    position: relative;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background: black;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li {
+    margin: 5px 0;
+  }
+</style>
+
   </head>
   <body>
     <!-- Navbar -->
@@ -87,9 +158,12 @@
     </video>
 
     <!-- Overlay content -->
-    <div class="overlay">
-        <img src="logo-removebg-preview.png" style="width: 1000px;" alt="My website logo">
-      <br>
-    </div>
+<div class="overlay">
+  <div class="overlay-content">
+    <h1>Elevate Your Game with Lotus</h1>
+    <a href="shop.html" class="button">Buy Now</a>
+  </div>
+</div>
+
   </body>
 </html>
