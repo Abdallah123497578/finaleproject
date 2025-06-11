@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css" />
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
   <title>Login | Lotus Gaming</title>
   <style>
@@ -50,6 +51,7 @@
     }
 
     button {
+      font-family: "myFont", sans-serif;
       width: 100%;
       padding: 12px;
       background-color: #111;
@@ -94,7 +96,7 @@
 <body>
      <nav>
         <div class="logo">
-            <img alt="My logo" src="logo-removebg-preview.png"/>
+            <h1>Lotus Gaming</h1>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -134,8 +136,15 @@
   </div>
 
   <footer>
-    &copy; 2025 Lotus Gaming. All rights reserved.
-  </footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Lotus Gaming. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>,
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>,
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </footer>
 
   <script>
     function handleLogin(event) {
