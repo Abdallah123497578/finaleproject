@@ -6,7 +6,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif; /* Use a sans-serif font */
+    font-family: 'Audiowide', sans-serif; /* Use Audiowide font */
+    font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Line height for readability */
+    letter-spacing: 2px;
     background-color: #f4f4f4; /* Light background color */
     color: #333; /* Dark text color for readability */
     overflow-x: hidden; /* Prevent horizontal scrolling */
