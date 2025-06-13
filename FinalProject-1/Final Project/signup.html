@@ -1,14 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="product.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts for custom font -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+  <!-- External CSS files -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css">
   <title>Sign Up | Lotus Gaming</title>
   <style>
+    /* Body styling */
     body {
       font-family: 'myFont', sans-serif;
       background-color: #f7f7f7;
@@ -17,6 +19,7 @@
       overflow-x: hidden; /* Prevents horizontal scrolling */
     }
 
+    /* Container for the signup form */
     .container {
       max-width: 500px;
       margin: 60px auto;
@@ -27,12 +30,14 @@
       margin-bottom: 135px;
     }
 
+    /* Heading style */
     h2 {
       text-align: center;
       margin-bottom: 25px;
       color: #111;
     }
 
+    /* Label styling */
     label {
       display: block;
       margin-bottom: 8px;
@@ -41,6 +46,7 @@
       color: #333;
     }
 
+    /* Input fields styling */
     input[type="text"],
     input[type="email"],
     input[type="password"] {
@@ -52,6 +58,7 @@
       font-size: 14px;
     }
 
+    /* Button styling */
     button {
       font-family: "myFont", sans-serif;
       width: 100%;
@@ -66,10 +73,12 @@
       transition: background 0.3s ease;
     }
 
+    /* Button hover effect */
     button:hover {
       background-color: #333;
     }
 
+    /* Login link styling */
     .login {
       text-align: center;
       margin-top: 15px;
@@ -86,6 +95,7 @@
       text-decoration: underline;
     }
 
+    /* Footer styling */
     footer {
       text-align: center;
       padding: 20px;
@@ -96,81 +106,95 @@
   </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <h1>Lotus Gaming</h1>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+  <!-- Navigation bar -->
+  <nav>
+    <div class="logo">
+      <h1>Lotus Gaming</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
 
-            <!-- Shop Dropdown -->
-            <li class="dropdown">
-                <a href="shop.html">Shop Now</a>
-                <ul class="dropdown-menu">
-                    <li><a href="laptop.html">Laptops</a></li>
-                    <li><a href="pcs.html">PCs</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
-                    <li><a href="accessories.html">Accessories</a></li>
-                </ul>
-            </li>
-
-            <li><a href="about.html">About Us</a></li>
-
-            <!-- Contact Dropdown -->
-            <li class="dropdown">
-                <a href="contact.html">Contact Us</a>
-                <ul class="dropdown-menu">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                </ul>
-            </li>
+      <!-- Shop Dropdown -->
+      <li class="dropdown">
+        <a href="shop.html">Shop Now</a>
+        <ul class="dropdown-menu">
+          <li><a href="laptop.html">Laptops</a></li>
+          <li><a href="pcs.html">PCs</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
         </ul>
-    </nav>
+      </li>
 
+      <li><a href="about.html">About Us</a></li>
+
+      <!-- Contact Dropdown -->
+      <li class="dropdown">
+        <a href="contact.html">Contact Us</a>
+        <ul class="dropdown-menu">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Signup form container -->
   <div class="container">
     <h2>Create Your Account</h2>
+    <!-- Signup form with custom submit handler -->
     <form onsubmit="handleSignup(event)">
+      <!-- Full Name input -->
       <label for="name">Full Name</label>
       <input type="text" id="name" placeholder="Enter your name" required />
 
+      <!-- Email input -->
       <label for="email">Email</label>
       <input type="email" id="email" placeholder="Enter your email" required />
 
+      <!-- Password input -->
       <label for="password">Password</label>
       <input type="password" id="password" placeholder="Create a password" required />
 
+      <!-- Confirm Password input -->
       <label for="confirm">Confirm Password</label>
       <input type="password" id="confirm" placeholder="Confirm your password" required />
 
+      <!-- Submit button -->
       <button type="submit">Sign Up</button>
     </form>
+    <!-- Link to login page -->
     <div class="login">
       Already have an account?<a href="login.html">Login</a>
     </div>
   </div>
 
+  <!-- Footer section -->
   <footer>
-        <div class="footer-content">
-            <p>&copy; 2023 Lotus Gaming. All rights reserved.</p>
-            <p>Follow us on:
-                <a href="https://www.facebook.com" target="_blank">Facebook</a>,
-                <a href="https://www.twitter.com" target="_blank">Twitter</a>,
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            </p>
-        </div>
-    </footer>
-  <!--Tutorial used and the javascript alert thigy was this coding website, and the powerpoint slides-->
+    <div class="footer-content">
+      <p>&copy; 2023 Lotus Gaming. All rights reserved.</p>
+      <p>Follow us on:
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>,
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>,
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </footer>
+  <!--
+    Tutorial used and the javascript alert thingy was this coding website, and the powerpoint slides
+  -->
   <script>
+    // Handles the signup form submission
     function handleSignup(event) {
-      event.preventDefault();
-      const password = document.getElementById("password").value;
-      const confirm = document.getElementById("confirm").value;
+      event.preventDefault(); // Prevents default form submission
+      const password = document.getElementById("password").value; // Get password value
+      const confirm = document.getElementById("confirm").value; // Get confirm password value
+      // Check if passwords match
       if (password !== confirm) {
-        alert("❌ Passwords do not match!");/*If passwords do not match this shows up at the top of the screen saying Passwords do not match*/
+        alert("❌ Passwords do not match!"); // Show error if passwords don't match
         return;
       }
-      alert("✅ Sign up successful!");/*If passwords do match then sign up will be succesful and form resets*/
-      event.target.reset();
+      alert("✅ Sign up successful!"); // Show success message if passwords match
+      event.target.reset(); // Reset the form
     }
   </script>
 

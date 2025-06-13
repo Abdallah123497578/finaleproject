@@ -111,7 +111,7 @@
     </nav>
 
   <div class="container">
-    <h2>Customer Complaint Form</h2>
+    <h2>Customer Contact Form</h2>
     <form id="complaintForm">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
@@ -122,9 +122,10 @@
       <label for="order">Order Number (if applicable)</label>
       <input type="text" id="order" name="order">
 
-      <label for="category">Complaint Category</label>
+      <label for="category"> Category</label>
       <select id="category" name="category" required>
         <option value="">Select a category</option>
+        <option value="website">Reviews</option>
         <option value="product">Product Issue</option>
         <option value="delivery">Delivery Problem</option>
         <option value="billing">Billing Error</option>
@@ -134,10 +135,10 @@
         <option value="other">Other</option>
       </select>
 
-      <label for="message">Complaint Details</label>
+      <label for="message"> Details</label>
       <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Submit Complaint</button>
+      <button type="submit">Submit</button>
     </form>
     <div class="success-message" id="successMessage">
        Thank you! Your complaint has been submitted.
